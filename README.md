@@ -3,8 +3,8 @@ Detect and Identify human faces in real time Implement opencv with python to do 
 
 Face Detection: Face detection is just pulling out faces in an image or a video. This technique we are using that shows for both face detection and identification. 
 
-Face Identification: Face identification is identify faces in a video or image including the person's name. This takes a little bit extra training, that we have done in here. the file name is faces-train.py The training portion and the recognizing or the identification of faces can be absolutely advanced. Advanced means using deep learning libraries such as tensorflow or PI torch. 
-Opencv has some built-in features to make those things(advanced) easier. To do this project here used: numpy==1.15.4, opencv==3.4.3.18, pillow=5.3.0, tensorflow==1.12.0, virualenv==16.1.0, python=3.6.7
+Face Identification: Face identification is identify faces in a video or image including the person's name. This takes a little bit extra training, that we have done in here. The training portion and the identification of faces can be absolutely advanced. Advanced means using deep learning libraries such as tensorflow or PI torch. 
+Opencv has some built-in features to make those things(advanced) easier. To do this project here used: numpy==1.15.4, opencv==3.4.3.18, pillow=5.3.0, virualenv==16.1.0, python=3.6.7
 First here is a base.py file which is just for opening the webcam automatic when I run the code. Now I name it as faces.py:Start with this faces.py file
 
 ✔ Step 1: Copy haarcascades from cv2
@@ -61,9 +61,9 @@ Need to save the labels, so can use them in faces.py file import pickle with ope
 
 Now need to train the item itself which haven't built in yet. So, we make our facial recognizer.
 
-There are many facial recognizer. But here used LBPH face recognizer which is Local Binary Patterns Histogram. OpenCV provides three methods of face recognition: Eigenfaces, Fisherfaces, Local Binary Patterns Histograms (LBPH).
 
-LBPH(Local Binary Patterns Histograms) : In LBPH each images is analyzed independently, while the eigenfaces method looks at the dataset as a whole. The LBPH method is somewhat simpler, in the sense that we characterize each image in the dataset locally and when a new unknown image is provided, we perform the same analysis on it and compare the result to each of the images in the dataset. The way which we analyze the images is by characterizing the local patterns in each location in the image. Using LBPH method for face recognition, it will probably work better in different environments and light conditions. However, it will depend on our training and testing data sets. There will need around 10 different images of the person's face in order to be able to recognize him/her. recognizer = cv2.face.LBPHFaceRecognizer_create() recognizer.train(x_train, np.array(y_labels)) #converting y labels into numpy array recognizer.save("trainner.yml") Now running the faces-train.py file for training a trainner.yml file will be saved in the same directory src, where faces.py and faces-train.py files have been saved.
+LBPH(Local Binary Patterns Histograms) : In LBPH each images is analyzed independently, while the eigenfaces method looks at the dataset as a whole. The LBPH method is somewhat simpler, in the sense that we characterize each image in the dataset locally and when a new unknown image is provided, we perform the same analysis on it and compare the result to each of the images in the dataset. The way which we analyze the images is by characterizing the local patterns in each location in the image. Using LBPH method for face recognition, it will probably work better in different environments and light conditions. However, it will depend on our training and testing data sets. There will need around 10 different images of the person's face in order to be able to recognize him/her. 
+recognizer = cv2.face.LBPHFaceRecognizer_create() recognizer.train(x_train, np.array(y_labels)) #converting y labels into numpy array recognizer.save("trainner.yml") Now running the faces-train.py file for training a trainner.yml file will be saved in the same directory src, where faces.py and faces-train.py files have been saved.
 
 Now, Start with opening same previous faces.py file:
 
