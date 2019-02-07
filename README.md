@@ -1,6 +1,8 @@
 # Face-detction-and-identification-in-real-time
-Detect and Identify human faces in real time Implement opencv with python to do facial recognition and facial identification: Face Detection: Face detection is just pulling out faces in an image or a video. This technique we are using that shows for both face detection and identification. Face Identification: Face identification is identify faces in a video or image including the person's name. This takes a little bit extra training, that we have done in here. the file name is faces-train.py The training portion and the recognizing or the identification of faces can be absolutely advanced. Advanced means using deep learning libraries such as tensorflow or PI torch. Opencv has some built-in features to make those things(advanced) easier. To do this project here used: numpy==1.15.4, opencv==3.4.3.18, pillow=5.3.0, tensorflow==1.12.0, virualenv==16.1.0, python=3.6.7
-
+Detect and Identify human faces in real time Implement opencv with python to do face detection and face identification: 
+Face Detection: Face detection is just pulling out faces in an image or a video. This technique we are using that shows for both face detection and identification. 
+Face Identification: Face identification is identify faces in a video or image including the person's name. This takes a little bit extra training, that we have done in here. the file name is faces-train.py The training portion and the recognizing or the identification of faces can be absolutely advanced. Advanced means using deep learning libraries such as tensorflow or PI torch. 
+Opencv has some built-in features to make those things(advanced) easier. To do this project here used: numpy==1.15.4, opencv==3.4.3.18, pillow=5.3.0, tensorflow==1.12.0, virualenv==16.1.0, python=3.6.7
 First here is a base.py file which is just for opening the webcam automatic when I run the code. Now I name it as faces.py:Start with this faces.py file
 
 ✔ Step 1: Copy haarcascades from cv2
